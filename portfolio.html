@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f9fafb; /* Fresh background color */
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 90%; /* Limiting container width for better readability */
+      margin: 0 auto; /* Center aligning the container */
+    }
+
+    .profile-sidebar {
+      flex: 1;
+      width: 25%;
+      padding: 2%; /* Adjusted padding */
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+      text-align: center;
+      color: #333; /* Dark gray text color */
+      background-color: #fff; /* White background */
+      border-radius: 3%; /* Rounded corners */
+    }
+
+    .profile-picture {
+      width: 60%; /* Adjusted width */
+      border-radius: 50%;
+      margin-bottom: 5%; /* Converted from 20px to % */
+    }
+
+    .profile-name {
+      font-size: 1.5em; /* Larger font size */
+      font-weight: bold;
+    }
+
+    .main-content {
+      flex: 2;
+      padding: 2%; /* Adjusted padding */
+      background: #fff; /* White background */
+      border-radius: 3%; /* Rounded corners */
+      margin-left: 3%; /* Add some space between sidebar and main content */
+    }
+
+    section {
+      margin-bottom: 4%; 
+      padding: 3%; 
+      background-color: #f9fafb; 
+      color: #333; 
+      border-radius: 2%; 
+      box-shadow: 0 0 2px rgba(0, 0, 0, 0.1); 
+    }
+
+    h2 {
+      color: #333; 
+    }
+
+    .contact-section {
+      text-align: center;
+    }
+
+    .fa {
+      padding: 3%; 
+      font-size: 3vw; 
+      width: 15%; 
+      text-align: left;
+      text-decoration: none;
+      margin: 1% 1%; 
+      border-radius: 20%; 
+      background-color: #333; 
+      color: #fff; /* White icon color */
+    }
+
+    .fa:hover {
+      opacity: 0.7;
+    }
+
+    .fa-facebook {
+      background: #1877f2; /* Facebook blue */
+    }
+
+    .fa-google {
+      background: #ea4335; /* Google red */
+    }
+
+    .section-content {
+      display: none;
+    }
+
+    .section-content.active {
+      display: block;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 4%; /* Converted from 20px to % */
+      padding: 1%; /* Converted from 10px to % */
+      background-color: #333;
+      border-radius: 2%; /* Rounded corners */
+      box-shadow: 0 0 2px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: #fff;
+      padding: 1%; /* Converted from 10px to % */
+      cursor: pointer;
+      font-size: 1.2vw; /* Responsive font size */
+      transition: background-color 0.3s;
+    }
+
+    .navbar a:hover {
+      background-color: #555;
+    }
+    .resume-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .resume {
+      width: 100%; /* Adjusted width */
+      border-radius: 50%;
+      margin-bottom: 5%; /* Converted from 20px to % */
+    }
+  </style>
+  <title>Your Portfolio</title>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="profile-sidebar">
+      <img alt="Profile Picture" class="profile-picture"
+        src="https://jeindino.com/Kian%20Ni%C3%B1o%20Tenebroso/kian.jpeg">
+      <div class="profile-name">Kian Niño Tenebroso</div>
+      <br><br>
+      <i class="fas fa-map-marker-alt contact-icon"></i> Guibuangan, Barili, Cebu<br>
+      <br>
+      <i class="fas fa-phone contact-icon"></i> 09185717590<br>
+      <br><br><br><br><br><br><br>
+      <h2>Contact</h2>
+      <p>
+        <a href="https://www.facebook.com/ogates123" class="fa fa-facebook"></a>
+        <a href="https://mail.google.com/mail/u/3/#search/kianninotenebroso%40gmail.com" class="fa fa-google"></a>
+      </p>
+    </div>
+
+    <div class="main-content">
+      <div class="navbar">
+        <a onclick="toggleSection('accomplishments')">Accomplishments</a>
+        <a onclick="toggleSection('about')">About Me</a>
+        <a onclick="toggleSection('education')">Education</a>
+        <a onclick="toggleSection('experience')">Experience</a>
+        <a onclick="toggleSection('interests')">Interests</a>
+        <a onclick="toggleSection('resume')">Resume</a>
+        <a onclick="toggleSection('skills')">Skills</a>
+      </div>
+
+      <section id="about" class="section-content active">
+        <h2>About Me</h2>
+        <p>I exhibit perfect attendance, punctuality, and exemplary behavior in addition to completing homework
+          diligently.<br> As a class player, I actively engage in coursework and contribute to a positive learning
+          environment.<br> My skills as a team player and strong self-confidence further enhance my academic
+          performance.</p>
+      </section>
+
+      <section id="experience" class="section-content">
+        <h2>Experience</h2>
+        <p>As an <i>IT SUPPORT PROFESSIONAL</i>, I am able to resolve technical issues,<br> ensuring smooth operation and
+          providing timely solutions for optimal system performance.</p>
+      </section>
+
+      <section id="education" class="section-content">
+        <h2>Education</h2>
+        <ul>
+          <li><b>Primary</b><br><i>Guiwang Elementary School<br> 2009-2015</i></li>
+          <br>
+          <li><b>Secondary</b><br><i>Alcoy National High School <br> 2015-2021</i></li>
+          <br>
+          <li><b>Tertiary</b><br><i>Cite Technical Institute Incorporated<br> 2021-Current</i></li>
+        </ul>
+      </section>
+
+      <section id="skills" class="section-content">
+        <h2>Skills</h2>
+        <ul>
+          <li>Cooperative Team Player</li>
+          <li>Interpersonal Collaboration</li>
+          <li>Effective Communication</li>
+          <li>Leadership Aptitude</li>
+        </ul>
+      </section>
+
+      <section id="interests" class="section-content">
+        <h2>Interests</h2>
+        <p>Music <br> Photography <br> Technology <br> Skimboarding <br> Travel</p>
+      </section>
+
+      <section id="accomplishments" class="section-content">
+        <header>
+          <h1>Accomplishment Report</h1>
+          <a href="https://docs.google.com/spreadsheets/d/1CkhNdOJkDDXPp9EWHVg33puKDy8B5VibnE7zEeKRuSA/edit#gid=1671978874">Link to Accomplishments</a>
+          <p>IT Internship at Suprea Phils Development Corp</p>
+          <p>Date: April 27, 2024</p>
+        </header>
+
+        <section>
+          <h2>Introduction</h2>
+          <p>During my internship at Suprea Phils Development Corp, I had the opportunity to contribute to various IT projects
+            and gain valuable hands-on experience in the field of information technology.</p>
+        </section>
+
+        <section>
+          <h2>Accomplishments</h2>
+          <ul>
+            <li>Assisted in the development of a new company website using HTML, CSS, and JavaScript.</li>
+            <li>Provided technical support to employees, troubleshooting hardware and software issues.</li>
+            <li>Participated in the implementation of a new CRM system, including data migration and user training.</li>
+            <li>Contributed to the documentation of IT processes and procedures for future reference.</li>
+            <li>Collaborated with team members on various IT projects, sharing knowledge and ideas.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Conclusion</h2>
+          <p>My internship at Suprea Phils Development Corp has been a valuable learning experience, allowing me to apply my
+            technical skills in a professional setting and gain insights into the workings of a real-world IT department. I am
+            grateful for the opportunity and look forward to continuing my journey in the field of information technology.</p>
+        </section>
+      </section>
+
+      <section id="resume" class="section-content">
+        <h2>Resume</h2>
+        <div class="container">
+            <img alt="Profile Picture" class="profile-picture"
+                src=" https://jeindino.com/Kian Niño Tenebroso/77c599b3-7393-42b….jpeg">
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script>
+    function toggleSection(sectionId) {
+      document.querySelectorAll('.section-content').forEach(section => {
+        section.classList.remove('active');
+      });
+
+      document.getElementById(sectionId).classList.add('active');
+    }
+  </script>
+</body>
+
+</html>
+
+
+
+
